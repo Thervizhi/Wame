@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Welcome — Wame</title>
+  <meta name="description" content="Welcome page for the Wame project" />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#7c3aed;
+      --muted:#98a0b3;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: dark;
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071026 0%,var(--bg) 100%);color:#e6eef8}
+    .container{
+      max-width:980px;margin:48px auto;padding:28px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+    }
+    header{display:flex;align-items:center;gap:16px}
+    .logo{
+      width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2dd4bf);
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px;color:white;box-shadow:0 6px 18px rgba(124,58,237,0.2)
+    }
+    h1{font-size:1.8rem;margin:0}
+    p.lead{color:var(--muted);margin:8px 0 18px}
+    .hero{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    a.btn{
+      display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;
+      background:linear-gradient(90deg,var(--accent),#06b6d4);color:white;box-shadow:0 8px 20px rgba(7,10,28,0.6);
+    }
+    a.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+    .feature{padding:14px;border-radius:12px;background:linear-gradient(180deg,var(--glass),transparent);border:1px solid rgba(255,255,255,0.02)}
+    footer{margin-top:20px;color:var(--muted);font-size:0.9rem;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    code{background:rgba(0,0,0,0.35);padding:4px 8px;border-radius:8px;color:#d8f3ff}
+    @media (max-width:640px){
+      header{flex-direction:row}
+      .logo{width:56px;height:56px;font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="welcome-title">
+    <header>
+      <div class="logo" aria-hidden="true">W</div>
+      <div>
+        <h1 id="welcome-title">Welcome to Wame</h1>
+        <p class="lead">A friendly welcome page for your project repository. Use this as a starting point for contributors, documentation and project links.</p>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="project summary">
+      <div class="card" style="flex:1 1 420px">
+        <h2 style="margin-top:0">Get started</h2>
+        <p style="color:var(--muted)">This page highlights where to find key resources and how to contribute. Replace the placeholders below with project-specific details.</p>
+
+        <div class="features" role="list">
+          <div class="feature" role="listitem">
+            <strong>Repository</strong>
+            <div style="color:var(--muted);margin-top:6px">Link to your source, issues and pull requests.</div>
+          </div>
+          <div class="feature" role="listitem">
+            <strong>Documentation</strong>
+            <div style="color:var(--muted);margin-top:6px">Add a README or docs site to help users and contributors.</div>
+          </div>
+          <div class="feature" role="listitem">
+            <strong>Contributing</strong>
+            <div style="color:var(--muted);margin-top:6px">Add contribution guidelines and a code of conduct.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px" class="actions" role="group" aria-label="primary actions">
+          <a class="btn" href="#" onclick="event.preventDefault()">View README</a>
+          <a class="ghost" href="#" onclick="event.preventDefault()">Open Issues</a>
+        </div>
+      </div>
+
+      <aside class="card" style="width:260px;min-width:220px">
+        <h3 style="margin-top:0">Quick info</h3>
+        <p style="color:var(--muted);margin:6px 0"><strong>Project:</strong> Wame</p>
+        <p style="color:var(--muted);margin:6px 0"><strong>Status:</strong> Getting started</p>
+        <p style="color:var(--muted);margin:6px 0"><strong>Usage:</strong> <code>npm run start</code></p>
+      </aside>
+    </section>
+
+    <section style="margin-top:20px" aria-label="customization">
+      <h3 style="margin-bottom:8px">How to customize</h3>
+      <p style="color:var(--muted);margin:0 0 12px">Edit this file to update the project title, links, and quick info. Replace placeholders with your repository links and commands.</p>
+
+      <pre class="card" style="overflow:auto;padding:12px;margin-top:12px;background:rgba(0,0,0,0.35)">
+<code>&lt;!-- Examples:
+ - Update the View README button href to the repository README
+ - Change the Usage command to your project's start/build script
+ --&gt;</code>
+      </pre>
+    </section>
+
+    <footer>
+      <div>Made with ♥ for the Wame project</div>
+      <div style="text-align:right">If you want, I can add this file to your repository for you.</div>
+    </footer>
+  </main>
+</body>
+</html>
